@@ -51,8 +51,15 @@ import retrofit2.Response;
             public void onResponse(Call<Museums> call, Response<Museums> response) {
                 if (response.isSuccessful()) {
                     Museums museums = response.body();
-                    listaelementos = museums.getElements();
-                    recyler.rellenarLista(listaelementos);
+
+                    List<Element> elementList = museums.getElements();
+
+                    for(int i = 0; i<elementList.size(); i++){
+                    }
+
+                    recyler.rellenarLista(elementList);
+
+
 
                 } else {
 
